@@ -17,7 +17,7 @@ export default function Question() {
             <div className="question__ans">
                  <img className="question__image" src={myImage} alt="bird" />
                 <div className="bird-sound">
-                    <p className="question__bird">******</p>
+                    <p className="question__bird">Орел</p>
                     <hr />
                     <audio className="question__sound" /* src={myAudio} */ controls />
                 </div>

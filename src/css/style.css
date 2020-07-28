@@ -10,6 +10,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0 100px;
+    height: 80px;
+
+}
+
+.titleH {
+    margin: 0;    
 }
 
 .word-song {
@@ -39,7 +45,7 @@ body {
     flex-direction: row;
     list-style: none;
     font-size: 1rem;
-    color: mintcream;
+    color: rgb(101, 205, 170);
     justify-content: space-between;
     background: mediumvioletred;
     border-radius: 5px;
@@ -75,5 +81,97 @@ body {
 }
 
 .question__sound {
-    margin: 20px 50px 0 0;
+    margin: 30px 50px 0 0;
+}
+
+.question__bird {
+    color: rgb(101, 205, 170);
+    font-size: 2rem;
+    margin: ;
+}
+
+.answer {
+    display: flex;
+}
+.answer__list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 20px 100px;
+    background: rgba(199, 21, 133, 0.5);
+    width: calc((100% - 220px)/2);
+    border-radius: 5px;
+    list-style: none;
+    color: mediumaquamarine;
+    font-size: 1.4rem;
+}
+
+.answer__type {
+    margin: 0;
+}
+
+.answer__input {
+    margin: 0 20px 0 10px;
+}
+
+.answer__item {
+    list-style: none;
+    height: 2rem;
+    border: 1px solid rgba(199, 21, 133, 0.8);
+    margin-left: -40px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.answer__item:hover {
+    background: rgba(199, 21, 133, 0.8);
+    cursor: pointer;
+}
+
+.answer__info {
+    background: rgba(199, 21, 133, 0.5);
+    width: calc((100% - 220px)/2);
+    height: 300px;
+    border-radius: 5px;
+    margin: 20px 100px 20px 10px;
+}
+
+.info-bird {
+    display: flex;
+}
+
+hr {
+    background-color: rgba(199, 21, 133, 0.8);
+}
+.name-bird {
+    margin: 15px;
+    color: mediumaquamarine;
+}
+.title, .title-lat {
+    margin: 0;
+}
+
+.audio {
+    margin-top: 10px;
+}
+.bird-text {
+    font-size: 1rem;
+    margin: 15px;
+    color: mediumaquamarine;
+    word-wrap: break-word;
+    height: 40px;
+}
+
+.button-next {
+    width: calc(100% - 200px);
+    height: 45px;
+    background: rgba(199, 21, 133, 0.5);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 45px;
+    margin: 0 100px 20px;
+    color: rgb(101, 205, 170);
+}
+
+.button-next:hover {
+    cursor: pointer;
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/header';
 import Question from './components/question';
+import AnswerList from './components/answerList';
+import Button from './components/button';
 import './css/style.css';
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
         <div>
             <Header />
             <Question />
+            <AnswerList />
+            <Button />
         </div>
     )
 }

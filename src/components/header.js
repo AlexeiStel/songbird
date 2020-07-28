@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
     return (
         <div className="header">
-            <h1>
+            <h1 className="titleH">
                 <span className="word-song">Song</span>
                 <span className="word-bird">Bird</span>
             </h1>
