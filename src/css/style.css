@@ -1,0 +1,31 @@
+@import './fonts/fonts.css';
+
+body {
+    font: 15px "Century Gothic", Futura, sans-serif;
+    margin: 0 auto;
+    background-color: maroon;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+
+.word-song {
+    font-family: 'Montez', sans-serif;
+    font-size: 4rem;
+    color: mediumaquamarine;
+}
+
+.word-bird {
+    font-family: 'Montez', sans-serif;
+    font-size: 4rem;
+    color: mediumvioletred;
+}
+
+.score {
+    color: mediumaquamarine;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
