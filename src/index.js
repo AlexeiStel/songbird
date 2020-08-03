@@ -2,19 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/header';
 import Question from './components/question';
-import AnswerList from './components/answerList';
+import Answer from './components/answer';
 import Button from './components/button';
+import AnimalInfo from './components/animalInfo';
+
 import './css/style.css';
 
-function App() {
-    return (
-        <div>
+class App extends React.Component {
+  
+ render() {
+   return (
+         <>
             <Header />
             <Question />
-            <AnswerList />
-            <Button />
-        </div>
-    )
+            <div className="answer">
+              <Answer />
+              <AnimalInfo/>
+            </div>
+            <Button name="Next level" />
+        </>
+      )
+   }
 }
 
 ReactDOM.render(

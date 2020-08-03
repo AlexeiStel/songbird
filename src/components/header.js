@@ -1,14 +1,14 @@
 import React from 'react';
 
-export default function Header() {
+export default function Header(props) {
     return (
         <div className="header">
-            <h1 className="titleH">
-                <span className="word-song">Song</span>
-                <span className="word-bird">Bird</span>
+            <h1 className="title-header">
+                <span className="word-sound">Sound</span>
+                <span className="word-animal">Animal</span>
             </h1>
             <h3 className="score">
-                Score: 0
+                {props.score}
             </h3>
         </div>
     )

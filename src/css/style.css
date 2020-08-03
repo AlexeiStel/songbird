@@ -3,175 +3,472 @@
 body {
     font: 15px "Century Gothic", Futura, sans-serif;
     margin: 0 auto;
-    background-color: maroon;
+    background-color: rgba(124, 77, 15, 0.863);
+    height: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 50px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 0 100px;
     height: 80px;
-
 }
 
-.titleH {
+.title-header {
     margin: 0;    
 }
 
-.word-song {
+.word-sound {
     font-family: 'Montez', sans-serif;
     font-size: 4rem;
-    color: mediumaquamarine;
+    color: black;
 }
 
-.word-bird {
+.word-animal {
     font-family: 'Montez', sans-serif;
     font-size: 4rem;
-    color: mediumvioletred;
+    color: rgb(209, 166, 85);
 }
 
 .score {
-    color: mediumaquamarine;
+    color: black;
     margin-top: 40px;
-    font-size: 1.5rem;
-}
-
-.question {
-    margin: 0 100px;
+    font-size: 2rem;
 }
 
 .question__list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     list-style: none;
     font-size: 1rem;
-    color: rgb(101, 205, 170);
+    color: black;
     justify-content: space-between;
-    background: mediumvioletred;
+    background: rgb(209, 166, 85);
     border-radius: 5px;
     min-height: 2rem;
 }
 
 .question__item {
-    width: calc((100% - 200px)/6);
     height: 100%;
     line-height: 2rem;
+    overflow: hidden;
+    flex: 1 1 auto;
 }
 
-.question__ans{
+.question__animal-block{
     display: flex;
     justify-content: space-between;
-    background: rgba(199, 21, 133, 0.5);
-    width: 100%;
+    background: rgb(209, 166, 85);
     border-radius: 5px;
 }
 
-.bird-sound,
+.animal-sound,
 .question__sound {
-    max-width: 800px;
     width: 100%;
     margin: 15px 50px;
 }
 
 .question__image {
-    width: 14rem;
+    max-width: 14rem;
     height: 10rem;
     margin: 15px;
     border-radius: 10px;
 }
 
-.question__sound {
-    margin: 30px 50px 0 0;
-}
-
-.question__bird {
-    color: rgb(101, 205, 170);
+.question__animal-name {
+    color: black;
     font-size: 2rem;
-    margin: ;
+    margin: 0;
+    text-align: center;
 }
 
 .answer {
     display: flex;
+    margin: 20px 0;
+    min-height: 300px;
 }
 .answer__list {
     display: flex;
     flex-direction: column;
-    margin: 20px 10px 20px 100px;
-    background: rgba(199, 21, 133, 0.5);
-    width: calc((100% - 220px)/2);
-    border-radius: 5px;
+    background: rgb(209, 166, 85);
+    width: 49%;
+    border-radius: 10px;
     list-style: none;
-    color: mediumaquamarine;
+    color: black;
     font-size: 1.4rem;
 }
+
+.dot {
+    background: gray;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: auto 12px;
+  }
+  
+  .green {
+    background: green;
+  }
+  
+  .red {
+    background: red;
+  }
 
 .answer__type {
     margin: 0;
 }
 
-.answer__input {
-    margin: 0 20px 0 10px;
-}
-
 .answer__item {
+    display: flex;
     list-style: none;
     height: 2rem;
-    border: 1px solid rgba(199, 21, 133, 0.8);
     margin-left: -40px;
-    height: 48px;
-    line-height: 48px;
+    height: 50px;
+    line-height: 50px;
 }
 
 .answer__item:hover {
-    background: rgba(199, 21, 133, 0.8);
-    cursor: pointer;
+  background: white;
+  cursor: pointer;
 }
 
-.answer__info {
-    background: rgba(199, 21, 133, 0.5);
-    width: calc((100% - 220px)/2);
-    height: 300px;
-    border-radius: 5px;
-    margin: 20px 100px 20px 10px;
+.answer__item:first-child:hover {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.info-bird {
+.answer__item:last-child:hover {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.about-animal {
+  background: rgb(209, 166, 85);
+  max-width: 49%;
+  height: 300px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.animal__info {
     display: flex;
 }
 
-hr {
-    background-color: rgba(199, 21, 133, 0.8);
+.hidden {
+    display: none;
+    visibility: hidden;
 }
-.name-bird {
-    margin: 15px;
-    color: mediumaquamarine;
+.visible {
+    display: block;
+    visibility: visible;
+    min-height: 300px;
+    height: 100%;
 }
-.title, .title-lat {
-    margin: 0;
+
+.animal-name {
+    margin: 15px auto;
+    color: black;
+    width: 40%;
+}
+
+.title, .title-latin {
+   text-align: center;
+   margin: 0;
 }
 
 .audio {
     margin-top: 10px;
+    max-width: 250px;
+    width: 100%;
 }
-.bird-text {
+.animal-text {
     font-size: 1rem;
-    margin: 15px;
-    color: mediumaquamarine;
+    margin: 5px 15px 15px;
+    color: black;
     word-wrap: break-word;
     height: 40px;
 }
 
+.button {
+  margin: 0 0 20px;
+}
 .button-next {
-    width: calc(100% - 200px);
+    width: 100%;
     height: 45px;
-    background: rgba(199, 21, 133, 0.5);
     border-radius: 5px;
     font-size: 1.5rem;
     line-height: 45px;
-    margin: 0 100px 20px;
-    color: rgb(101, 205, 170);
 }
 
 .button-next:hover {
     cursor: pointer;
+}
+
+.active {
+    color: black;
+    background: rgb(209, 166, 85);
+}
+
+.passive {
+  background: rgba(209, 166, 85, 0.3);
+  color: gray;
+}
+
+.final__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background: rgb(209, 166, 85);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  
+  .final__wrapper-hidden {
+    display: none;
+  }
+  
+  .final_image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .final_image-none {
+    color:  black;
+    font-size: 2rem;
+    display: none;
+  }
+
+  .final {
+    color:  grey;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    line-height: 0.3rem;
+    text-decoration: none;
+    margin: 200px auto 50px;
+  }
+  
+  .final-number {
+    color: black;
+  }
+  .rhap_container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    width: 100%;
+    top: 15px;
+    left: -30px;
+  }
+  
+  .rhap_progress-section {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    width: 80%;
+  }
+  
+  .rhap_current-time {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+
+  }
+  
+  .rhap_progress-container {
+    max-width: 300px;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .rhap_progress-bar {
+    background-color: black;
+  }
+  
+  .rhap_progress-indicator {
+    left: 0%;
+    height: 10px;
+    background: rgb(208, 212, 212);
+    position: relative;
+  }
+  
+  .rhap_time {
+    display: block;
+    position: absolute;
+    right: 55%;  }
+  
+  .rhap_additional-controls {
+    display: none;
+  }
+  
+  .rhap_forward-button,
+  .rhap_rewind-button {
+    display: none;
+  }
+  
+  .rhap_volume-controls {
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    border-radius: 50%;
+  }
+
+  .rhap_volume-button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(209, 166, 85);
+    color:  rgb(209, 166, 85);
+    border-radius: 50%;
+    background: white;
+    font-size: 1.4rem; 
+    outline: none;
+  }
+
+  .rhap_play-pause-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+  }
+  
+  .rhap_play-pause-button > svg {
+    width: 50px;
+    height: 50px;
+    color: white;
+  }
+
+  @media all and (max-width: 1300px) {    
+    .rhap_container {
+      top: 15px;
+      left: 0px;
+    }
+
+    .rhap_progress-container {
+      
+    }
+        
+    .rhap_time {
+      right: 50%;
+    }
+
+    .about-animal {
+      height: 330px;
+    }
+
+    .answer__item {
+      height: 55px;
+    }
+  }
+
+  @media all and (max-width: 1000px) {    
+    .about-animal {
+      height: 524px;
+    }
+
+    .animal__info {
+      flex-direction: column;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  
+    .animal-name {
+      width: 90%;
+  }
+
+    .title, .title-latin {
+      text-align: center;
+  }
+
+    .question__image {
+      margin: 15px auto;
+    }
+
+    .answer__item {
+      height: 88px;
+      line-height: 88px;
+    }
+  }
+  
+  @media all and (max-width: 800px) {    
+    .answer {
+      flex-wrap: wrap;
+  }
+  
+    .answer__list {    
+      width: 100%;
+      margin: 0 auto 20px;
+    }
+
+    .about-animal {
+      max-width: 100%;
+      margin: 0 auto 20px;
+    }    
+
+    .answer__item {
+      height: 50px;
+      line-height: 50px;
+   }
+}
+
+@media all and (max-width: 600px) {    
+    .question__animal-block{
+      flex-wrap: wrap;
+    }
+  
+    .question__image {
+      margin: 15px auto;
+    }
+
+    .animal__info {
+      flex-direction: column;
+    }
+  }
+
+@media all and (max-width: 450px) {    
+    .container {
+      margin: 0 25px;
+    }
+    
+    .rhap_container {
+      height: 100px;
+    }
+
+    .rhap_progress-section {
+      position: absolute;
+      left: 0px;
+      top: 60px;
+      width: 100%;
+    }
+
+    .rhap_progress-container {
+      max-width: 300px;
+      width: 100%;
+    }
+        
+    .rhap_time {
+      right: 0;
+    }
+
+    .rhap_progress-container {
+      max-width: 900px;
+      overflow: hidden;
+      border-radius: 5px;
+    } 
+    .about-animal {
+      height: 635px;
+    } 
 }
