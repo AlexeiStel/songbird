@@ -193,6 +193,31 @@ class App extends React.Component {
                active={this.state.isButton}
                onClick={() => this.handleButton()}
             />
+            <div className={this.state.final}>
+              <h1 className="final">
+                Score:<span className="final-number">{this.state.score}/30</span>
+              </h1>
+                  <h2 className={this.state.score === 30 ? "" : startState.finalImage}>
+                      Ты - настоящий повелитель зверей!
+                  </h2>
+                  <img
+                    style={
+                      { 
+                        width: "40%", 
+                        height: "auto", 
+                        marginBottom: "20px" 
+                      }
+                    }
+                    src={finalImage}
+                    className={this.state.score === 30 ? "" : startState.finalImage}
+                    alt="winner"
+                  />
+              <Button
+                  name="Try again!"
+                  active={this.state.isButton}
+                  onClick={() => this.handleButton()}
+              />
+            </div>
         </>
       )
    }
