@@ -112,6 +112,7 @@ class App extends React.Component {
     classAnswer.splice(index, 1, "dot red");
      this.setState({ classAnswer });
      this.audio = new Audio(error);
+     this.setState({ playing: false });
      this.audio.play();
    };
 
