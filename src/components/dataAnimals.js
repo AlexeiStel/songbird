@@ -1,302 +1,309 @@
+1. Домашние 
+2. Парнокопытные
+3. Грызуны
+4. Травоядные
+5. Хищники
+6. Морские
+
 const dataAnimals = [
     [ 
       {
         id: 1,
-        name: 'Ворон',
-        species: 'Corvus corax',
-        description: 'Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.',
-        image: 'https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
+        name: 'Собака',
+        species: 'Canis lupus familiaris',
+        description: 'Самые верные друзья людей среди братьев наших меньших — это собаки. При встрече они виляют хвостом, смотрят умными глазами и заливаются звонким лаем. Собака — друг человека.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/12/%D0%BC-%D1%81-1.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2013/08/Sobaka_-_Lay_sobaki-2.mp3'
       },
       {
         id: 2,
-        name: 'Журавль',
-        species: 'Grus grus',
-        description: 'Звуки, издаваемые журавлем, похожи на звонкое «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».',
-        image: 'https://live.staticflickr.com/65535/49221158846_b0b69a58f1.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC512582-190604_1087_Grus_tok.mp3'
+        name: 'Кот',
+        species: 'Felis silvestris catus',
+        description: 'Кошка — млекопитающее семейства кошачьих отряда хищных. Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов, а также феромоны и движения тела.',
+        image: 'http://boobooka.com/wp-content/uploads/2013/08/mur-kota.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2013/08/Myaukane_koshki_-_Myaukane_koshki.mp3'
       },
       {
         id: 3,
-        name: 'Ласточка',
-        species: 'Delichon urbicum',
-        description: 'Для ласточек характерно негромкое щебетание. Песни ласточек не смолкают на протяжении всего лета. Исследователи различают у птиц до 6 щебечущих звуков: «вит», «ви-вит», «чивит», «чиривит» и т.п. Ласточки любят петь дуэтом.',
-        image: 'https://live.staticflickr.com//65535//48539007512_5029d2a9a0.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3'
+        name: 'Лошадь',
+        species: 'Equus ferus caballus',
+        description: 'Наиболее характерную особенность лошади составляют ноги, имеющие только один вполне развитый и одетый копытом палец. Череп вытянут и отличается относительно длинной лицевой частью.',
+        image: 'http://boobooka.com/wp-content/uploads/2016/09/mini-5-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/02/rzhanie-loshadi.mp3'
       },
       {
         id: 4,
-        name: 'Козодой',
-        species: 'Caprimulgus europaeus',
-        description: 'Козодой – неприметная птица, известная благодаря своему голосу. Песня козодоя звучит как монотонная трель похожая на тарахтение мотоцикла. Такое дребезжание слышно от заката до рассвета, его тональность, частота и громкость изменяются. ',
-        image: 'https://live.staticflickr.com/65535/48456345286_dbc8530027.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC486956-190623_22.37h_nachtzwaluw_rechte%20heide_zang_ad%20_2ex_gezien_.mp3'
+        name: 'Корова',
+        species: 'Bos taurus',
+        description: 'Диапазон слуха у коров составляет от 23 Гц до 35 кГц. Их частота наилучшей чувствительности составляет 8 кГц, и они имеют самый низкий порог -21 дБ. Пороговые значения остроты локализации звука составляют в среднем 30 °.',
+        image: 'http://boobooka.com/wp-content/uploads/2016/09/mini-15-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/01/%D0%9C%D1%8B%D1%87%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D1%8B.mp3'
       },
       {
         id: 5,
-        name: 'Кукушка',
-        species: 'Cuculus canorus',
-        description: 'Кукушку назвали так из-за особенностей ее песен. Звонкое «ку-ку» не спутать ни с какой другой птицей. Кукушки не строят гнезда, их потомство выращивают другие виды пернатых, которым кукушки подбрасывают свои яйца.',
-        image: 'https://live.staticflickr.com/65535/48377838151_e15f430ec1.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501461-190616_08.13h_koekoek_brabantse%20biesbosch%20jantjesplaat_roep_1%20ex_ad%20m_ter%20plaatse%20zingend_gezien_.mp3'
+        name: 'Свинья',
+        species: 'Sus scrofa domesticus',
+        description: 'Для свиней характерно слабое зрение, острый слух, тонкое обоняние, способность хорошо плавать; повышенная плодовитость, способность к быстрому росту и жироотложению.',
+        image: 'http://boobooka.com/wp-content/uploads/2016/09/mini-18-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2016/09/Zvuki_prirody_-_Svinya.mp3'
       },
       {
         id: 6,
-        name: 'Синица',
-        species: 'Parus major',
-        description: 'В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.',
-        image: 'https://live.staticflickr.com//65535//49366042493_c48c81d58d.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC518417-Kj%C3%B8ttmeis%20XC%20Helg%C3%B8ya%20Elias%20A.%20Ryberg20200108133922_079.mp3'
+        name: 'Овца',
+        species: 'Ovis aries',
+        description: 'Все овцы обладают хорошим слухом и чувствительны к внезапному шуму. Боковое расположение глаз и горизонтально-вытянутые зрачки увеличивают угол обзора до приблизительно 270—320°, что позволяет животным смотреть назад, не поворачивая головы.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/02/mini-21-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/02/zvuki-barana.mp3'
       }
     ],
     [
       {
         id: 1,
-        name: 'Воробей',
-        species: 'Passer domesticus',
-        description: 'Воробьи являются самыми известными и узнаваемыми пернатыми. Их легко узнать по пестрому оперению и задорному чириканью. Воробьи относятся к синатропному виду — они селятся поблизости к человеческому жилищу.',
-        image: 'https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3'
+        name: 'Зубр',
+        species: 'Bison bonasus',
+        description: 'Зубры живут небольшими стадами величиной от трёх до двадцати животных, состоящих в основном из самок и молодых телят. Лидером в стаде зубров является самка. Самцы предпочитают жить поодиночке и присоединяются к стаду только во время яра для спаривания.',
+        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-21-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2019/02/zvuki-zubra.mp3'
       },
       {
         id: 2,
-        name: 'Грач',
-        species: 'Corvus frugilegus',
-        description: 'Грачи очень умные и сообразительные птицы. С помощью клюва они создают и используют простейшие орудия. У грачей развит рефлекс на звуки трактора. Услышав «тарахтение», они летят на звук – трактор пашет землю, значит, в этом месте много корма.',
-        image: 'https://live.staticflickr.com//65535//49347123322_291c86b016.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/RLRHCUIPIY/XC512540-gawron%20Suble%2019.12.19%20%2012.35.mp3'
+        name: 'Олень',
+        species: 'Cervidae',
+        description: 'Некоторые виды живут поодиночке, однако большинство видов живут в стадах. Часто это так называемые гаремные группы, в которых один самец возглавляет группу из нескольких самок и детёнышей, обороняя её от вторжения других соперников-самцов.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-17-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/rev-olenja.mp3'
       },
       {
         id: 3,
-        name: 'Галка',
-        species: 'Coloeus monedula',
-        description: 'Слово «галка» произошло из старославянского языка и переводится как «чёрный». Этим словом часто называют воронов или других черных птиц. Латинское название галки «monedula» связывают со словами монета за любовь птицы к блестящим и ярким вещам.',
-        image: 'https://live.staticflickr.com//65535//49237149586_993cf685c5.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC510498-Coloeus%20monedula_2019.11.13_11.55_01.mp3'
+        name: 'Кенгуру',
+        species: 'Macropus',
+        description: 'Кенгуру является одним из символов Австралии. Это животное изображено на гербе Австралии, некоторых австралийских монетах, а также используется некоторыми из наиболее известных австралийских организаций.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-15-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/golos-kenguru.mp3'
       },
       {
         id: 4,
-        name: 'Певчий дрозд',
-        species: 'Turdus philomelos',
-        description: 'Дрозд — лучший певец из отряда воробьиных. Песня состоит только из красивых звучных свистов и коротких трелей. Чаще всего её можно услышать в утреннее и вечернее время. Поют дрозды в течении всего периода гнездования.',
-        image: 'https://live.staticflickr.com/65535/48979125763_e2534f54bd.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513326-190704_1146_TF-Glogow.mp3'
+        name: 'Жираф',
+        species: 'Giraffa camelopardalis',
+        description: 'Среди всех млекопитающих у жирафов одна из наименьших потребностей во сне — от 10 минут до 2 часов в сутки; в среднем жирафы спят 1,9 часа в день. Спят жирафы как стоя, так и лёжа, согнув шею и положив голову на круп.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-28-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/zvuk-krika-molodogo-zhirafa.mp3'
       },
       {
         id: 5,
-        name: 'Сорока',
-        species: 'Pica pica',
-        description: 'Сорока очень трудолюбивая птица. Она строит до восьми гнёзд, а потом выбирает из них самое лучшее. Вход в гнездо сорок всегда обращен на юг, чтобы в жилище было теплее. Сороки являются единственными птицами, которые узнают себя в зеркале.',
-        image: 'https://live.staticflickr.com//65535//49360363066_ff02bb6a73.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC500868-Pica%20pica2019.08.23_09.18_02.mp3'
+        name: 'Бегемот',
+        species: 'Hippopotamus amphibius',
+        description: 'Поведение бегемота отличается выраженной агрессивностью. Драки бегемотов-самцов часто приводят к гибели одного из участников. Бегемот является самым опасным для человека зверем Африки ',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-25-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/rev-begemota.mp3'
       },
       {
         id: 6,
-        name: 'Сойка',
-        species: 'Garrulus glandarius',
-        description: 'Когда сойка волнуется, хохолок на её голове взъерошивается. Птица старается создать устрашающее зрелище. Сойки умеют имитировать голоса других птиц, животных и звуки, которые создает человек. На зиму они делают большие запасы желудей и орехов.',
-        image: 'https://live.staticflickr.com//65535//49369678956_9a7465c7f4.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/TFOGOENSTQ/XC501517-191008_1590%201300.%20Eichelh%C3%A4her%20D%2C%20NW%2C%20LEV.%20Stephan%20Risch.mp3'
+        name: 'Верблюд',
+        species: 'Camelus',
+        description: 'На спине у верблюдов имеются своеобразные «горбы». Верблюды в них запасают жир, окисляя который в случае большой жажды, они превращают в воду.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-9-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/03/zvuki-izdavaemye-verbljudom.mp3'
       }
     ],
     [
       {
         id: 1,
-        name: 'Зяблик',
-        species: 'Fringilla coelebs',
-        description: 'В дикой природе насчитывается 450 видов зябликов. Зимой зяблики ведут стайный образ жизни. Иногда в их семьях можно увидеть воробьев. Запевают зяблики весной, с наступлением брачного периода. Их пение – это заливистые многоминутные рулады.',
-        image: 'https://live.staticflickr.com/65535/49143150817_2d3a2f6c1e.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC512407-150622_03%20zi%C4%99ba%20%282%29.mp3'
+        name: 'Ёж',
+        species: 'Erinaceus europaeus',
+        description: 'После зимней спячки у ежей начинается брачный период. Между самцами часто происходят драки из-за самок. Самцы кусают друг друга за ноги, морду, толкаются, используют в бою свои иглы. Во время драки ежи громко сопят и фыркают.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-14-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/07/zvuk-fyrkane-ezhika.mp3'
       },
       {
         id: 2,
-        name: 'Клёст',
-        species: 'Loxia curvirostra',
-        description: 'Клестов называют «рождественскими» птицами. В естественных условиях они дают потомство зимой – в январе. Эти птицы утепляют свои гнезда мхом и шерстью животных, потому птенцам не холодно. В поисках шишек клесты могут улетать за 3500 км от гнезда.',
-        image: 'https://live.staticflickr.com//65535//49365470123_f2de66bb35.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/OTVUCEGYZN/XC495381-Kruisbek%20roep%20NHD%20290619.mp3'
+        name: 'Заяц',
+        species: 'Lepus',
+        description: 'Отличаются длинными ушами, коротким поднятым хвостом, недоразвитыми ключицами, длинными задними лапами, что позволяет им двигаться прыжками. Русак может достигать скорости 70 км/ч.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/07/mini-14-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/07/zvuki-zajca.mp3'
       },
       {
         id: 3,
-        name: 'Горлица',
-        species: 'Streptopelia turtur',
-        description: 'Горлица обитает в смешанных и широколиственных лесах, а также в городских парках и поселках. Птицы часто выбирают места жизни рядом с человеком и легко привыкают к людям. Благодаря мелодичному приятному пению горлиц часто разводят в домашних условиях.',
-        image: 'https://live.staticflickr.com/65535/48063004977_84252f9ceb.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC324106-Turkawka_Streptopelia_turtur_Poland_Jarek_Matusiak_2011625_07.mp3'
+        name: 'Белка',
+        species: 'Sciurus',
+        description: 'Одной из широко известных отличительных особенностей многих белок является их способность запасать на зиму орехи. Некоторые виды белок закапывают их в землю, другие — прячут в дуплах деревьев.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-20-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/zvuki-belki.mp3'
       },
       {
         id: 4,
-        name: 'Дятел',
-        species: 'Dendrocopos major',
-        description: 'Дятел – заметная и шумная птица, часто живет рядом с человеком. С середины января до конца июня можно услышать «барабанную дробь» дятлов – трель от вибрации веток под быстрыми ударами клюва птицы. В хорошую погоду дробь слышна в радиусе 1,5 км.',
-        image: 'https://live.staticflickr.com/65535/49339376578_e933426455.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC518928-AB-017%20dzi%C4%99cio%C5%82%20du%C5%BCy%20agresja%20%282%29.mp3'
+        name: 'Суслик',
+        species: 'Spermophilus',
+        description: 'Суслики известны своей привычкой при опасности вставать на задние лапы и издавать характерные свистящие звуки. Питаются суслики надземными и подземными частями растений, всегда неподалёку от нор. ',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-21-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/zvuki-suslika.mp3'
       },
       {
         id: 5,
-        name: 'Удод',
-        species: 'Upupa epops',
-        description: 'Удоды предпочитают жить на открытых ландшафтах с отдельными деревьями или рощами. Наиболее удобными для птицы являются лесостепь и саванна. Удод может выбирать места жительства рядом с человеком: пастбища, виноградники, фруктовые сады.',
-        image: 'https://live.staticflickr.com//65535//49226383598_6f8be86a06.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC477326-dudek%20%282%29.mp3'
+        name: 'Бурундук',
+        species: 'Tamias',
+        description: 'На зиму бурундуки впадают в спячку. Они просыпаются среди зимы, подкрепляются немного, а затем снова засыпают. Весной выходят из нор в разное время, смотря по тому, какая стоит погода. ',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-22-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/zvuk-burunduka.mp3'
       },
       {
         id: 6,
-        name: 'Стриж',
-        species: 'Apus apus',
-        description: 'Стрижа можно увидеть практически в каждом уголке планеты. Они обитают как в лесных зонах, так и на открытых местностях. Живут стрижи крупными стаями. Большие колонии этих птиц можно увидеть в городах или на прибрежных скалах.',
-        image: 'https://live.staticflickr.com//65535//48386150031_7b749df74b.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/TMUAWSDHDJ/XC511871-G.mp3'
+        name: 'Шиншилла',
+        species: 'Chinchilla',
+        description: 'Шиншиллы издают очень интересные звуки: когда им что-то не нравится, они издают звук, похожий на кряканье или чириканье. Если их разозлить очень сильно, то они начинают издавать звуки, похожие на рычание, а порою при этом очень быстро щёлкают зубами.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-28-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/07/zvuk-shinshilly.mp3'
       }
     ],
     [
       {
         id: 1,
-        name: 'Жаворонок',
-        species: 'Alauda arvensis',
-        description: 'Жаворонки — перелетные птицы. С начала сентября они отлетают на юг. Возвращаются они в начале марта, независимо от того, сошел снег или нет. По прилету жаворонков определяли наступление весны и пору, когда пора пахать землю.',
-        image: 'https://live.staticflickr.com/65535/47105096764_f751fba568.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC462158-Skowronek_Alauda_arvensis_Poland_Jarek_Matusiak_%20-006%20skowronek%20%282%29.mp3'
+        name: 'Косуля',
+        species: 'Capreolus',
+        description: 'Небольшие олени обладающие стройным телосложением и длинной шеей, ноги тонкие и длинные. Голова небольшого размера с длинными и широкими ушами. Только самцы имеют небольшие дважды ветвящиеся рога, в сечении округлые.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/02/mini-1-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/02/zvuk-manka-kosuli.mp3'
       },
       {
         id: 2,
-        name: 'Соловей',
-        species: 'Luscinia luscinia',
-        description: 'Соловьи поют с начала мая и до конца лета. Каждая песня соловья состоит из 12 повторяющихся элементов, которые еще называют коленами. Кроме собственных трелей, соловьи легко и хорошо перенимают пение других птиц.',
-        image: 'https://live.staticflickr.com/7605/27669397735_f3c21758f2.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/HILVWSADVL/XC513809-R07_0052%20Thrush%20Nightingale%20Snipe.mp3'
+        name: 'Зебра',
+        species: 'Hippotigris',
+        description: 'Зебру невозможно приручить. По темпераменту они сильно отличаются от своих одомашненных собратьев. В их арсенале имеются клыки и копыта, которыми они активно пользуются при возникновении малейшей угрозы.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/07/mini-15-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/07/zvuki-zebry.mp3'
       },
       {
         id: 3,
-        name: 'Скворец',
-        species: 'Sturnus vulgaris',
-        description: 'Скворцы - перелётные птицы. Синхронный перелет больших стай скворцов называется мурмурацией. Это красивое и завораживающее явление – множество птиц будто танцуют в воздухе, образуя замысловатые фигуры, которые уменьшаются и увеличиваются в небе.',
-        image: 'https://live.staticflickr.com/65535/49357593971_9509fe1d7c.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC515519-2020.01.01_17.24_01.MP3'
+        name: 'Антилопа',
+        species: 'Oryx illaqueatus',
+        description: 'У всех антилоп ноги обыкновенно довольно длинные и стройные, хвост оканчивается пучком волос, шерсть короткая и окрашена в живые цвета; у многих антилоп существуют так называемые слёзные каналы под глазами.',
+        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-30-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2019/02/blejanie-antilopy.mp3'
       },
       {
         id: 4,
-        name: 'Иволга',
-        species: 'Oriolus oriolus',
-        description: 'Мелодичность голоса иволги сравнивают со звучанием флейты. Человеку сложно разглядеть иволгу, так как она обитает высоко на деревьях. Иволга не только очень красивая, но и  полезная птица. Она уничтожает ядовитых гусениц, которых не поедают другие птицы.',
-        image: 'https://live.staticflickr.com/65535/47102184004_58a93380b9.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC491801-2019.07.07_06.28_01.mp3'
+        name: 'Слон',
+        species: ' Elephantidae',
+        description: 'Слоновые хорошо слышат в области низких частот, вплоть до инфразвука, но наибольшая чувствительность их слуха на частоте около 1 кГц[17]. Слоны обладают музыкальным слухом и музыкальной памятью, способны различать мелодии из трёх нот.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-5-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/03/zvuk-slona.mp3'
       },
       {
         id: 5,
-        name: 'Свиристель',
-        species: 'Bombycilla garrulus',
-        description: 'У свиристели очень цепкие коготки, что помогает птице удерживаться на ветках и склевывать ягоды, которые труднее всего достать. В период ухаживаний самец предлагает самке ягоду или другое угощение. Если самка его принимает, то птицы создают пару.',
-        image: 'https://live.staticflickr.com//65535//49367433842_1b06da0e6b.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC517421-AB-004%20%282%29%20jemio%C5%82uszka.mp3'
+        name: 'Носорог',
+        species: 'Rhinocerotidae',
+        description: 'Днём носороги спят, активными их можно застать в сумерках и ночью. Это очень боязливые и осторожные звери, избегающие близости к человеку. Разогнавшись, носорог может достичь скорости 45 км/ч.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-27-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/zvuk-nosoroga.mp3'
       },
       {
         id: 6,
-        name: 'Щегол',
-        species: 'Carduelis carduelis',
-        description: 'Щеглы поют красиво и мелодично. И в природе, и в неволе они щебечут почти круглый год. В пении щегла различают более 20 переливчатых трелей. Щеглы привыкают к людям, и даже могут возвратиться к хозяину после того, как их выпустили на волю',
-        image: 'https://live.staticflickr.com//65535//49366257253_db3ce48b9a.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489265-190724_07.58h_putter_biesbosch_%20boompjes%20langs%20open%20water_zang_1ex_ad_niet%20gezien_.mp3'
+        name: 'Осёл',
+        species: 'Equus asinus',
+        description: 'Ослы имеют пресловутую репутацию упрямства, но это объясняется очень сильным чувством самосохранения. Ослы тонко понимают предел своих физических возможностей и не позволяют человеку переходить его.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-14-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/03/zvuki-osla.mp3'
       }
     ],
     [
       {
         id: 1,
-        name: 'Орёл',
-        species: 'Aquila nipalensis',
-        description: 'В древние времена орел был символом солнца. Орлы часто парят над землей, при этом скорость их перемещения может достигать 240 км/ч. Иллюзия медленного движения происходит из-за высоты полета – более 700 метров',
-        image: 'https://live.staticflickr.com//4835//43867392960_7105d71e19.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/KTBTZAHSXF/10_Aquila_nipalensis_al02D85.mp3'
+        name: 'Рысь',
+        species: 'Lynx',
+        description: 'Рысь — типичная кошка, хотя величиной с крупную собаку, которую отчасти напоминает своим укороченным телом и длинноногостью. От других кошачьих рыси отличаются коротким хвостом и кисточками на концах ушей.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-2-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/03/zvuk-ryka-rysi.mp3'
       },
       {
         id: 2,
-        name: 'Коршун',
-        species: 'Milvus migrans',
-        description: 'Коршуны – крупные хищники, в высоту они достигают около полуметра, а вес взрослых особей достигает 1 кг. Крылья узкие и длинные, их размах составляет 1,5 м. Коршуны часто гнездятся большими стаями и даже образуют крупные колонии.',
-        image: 'https://live.staticflickr.com//65535//48701190276_ee2a9ed594.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC485740-2019-06-22%20Selenga%20Milan%20brun%20cris%20de%20quemandage%203.mp3'
+        name: 'Лисица',
+        species: 'Vulpes',
+        description: 'Во время гона и просто в состоянии возбуждения лисица издаёт отрывистый громкий лай; лисы, когда дерутся, пронзительно визжат. По голосу самка и самец различаются: самка делает тройной «взлай», заканчивающийся коротким воем, самец лает на манер собаки.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-12-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/07/murchanie-i-ururukane-lisy.mp3'
       },
       {
         id: 3,
-        name: 'Лунь',
-        species: 'Circus cyaneus',
-        description: 'Лунь – это небольшой сокол. Питается в основном мышевидными грызунами, основа его рациона – полёвки, хомяки, мыши. Оперение луня может быть пепельно-серым. С такой птицей связано сравнение «седой, как лунь».',
-        image: 'https://live.staticflickr.com/65535/49322743903_32f3922d9e.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513498-190709_1175_Cir.cyan-f.mp3'
+        name: 'Гепард',
+        species: 'Acinonyx jubatus',
+        description: 'Гепарды охотятся, преследуя добычу. Сначала они приближаются к выбранной жертве на расстояние около 10 метров, а затем пытаются поймать её в скоростном забеге. В погоне за жертвой развивают скорость до 130 км/ч, разгоняясь до 75 км/ч за 2 секунды.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/12/mini-1-200x115.jpeg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/12/tjavkane-geparda.mp3'
       },
       {
         id: 4,
-        name: 'Сокол',
-        species: 'Falco peregrinus',
-        description: 'Латинское название сокола Falco произошло от слова «серп» из-за серповидной формы крыльев. Длинные и широкие крылья позволяют соколу высоко подниматься в небо и свободно парить. Скорость полёта сокола достигает 280-320 километров в час.',
-        image: 'https://live.staticflickr.com//65535//49310710607_92a3a145a9.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC496049-Pilgrimsfalk_06.mp3'
+        name: 'Леопард',
+        species: 'Panthera pardus',
+        description: 'Леопард прекрасно лазает по деревьям, нередко устраиваясь там на дневной отдых или в засаде, а порой даже ловит на деревьях обезьян. Он тихо подкрадывается к добыче на расстояние прыжка. Прыгает на добычу и душит её, но в случае неудачи не преследует.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-30-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/mjaukane-leoparda.mp3'
       },
       {
         id: 5,
-        name: 'Ястреб',
-        species: 'Accipiter gentilis',
-        description: 'Для всех ястребов характерны широкие и короткие крылья. Ещё один отличительный признак - белые «брови» над глазами. Славянские дружинники размещали изображение ястреба на своих знаменах, как символ отваги, мощи и безжалостности к врагам.',
-        image: 'https://live.staticflickr.com//65535//49024617331_b9d0d2c9b3.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC512740-Duvh%C3%B6k_09.mp3'
+        name: 'Тигр',
+        species: 'Panthera tigris',
+        description: 'В засаде тигр обычно выжидает, лёжа под ветром, а при приближении делает быстрый рывок на короткую дистанцию. При промахах преследует добычу не далее 100—150 м. Тигр может развить скорость до 60 км/ч практически на любой местности.',
+        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-27-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2019/02/zvuk-tigra.mp3'
       },
       {
         id: 6,
-        name: 'Филин',
-        species: 'Bubo bubo',
-        description: 'Полет филина бесшумный, зрение очень острое. Эти особенности делают птицу непревзойденным ночным охотником. У филина нет естественных врагов, ни один зверь не охотится на взрослых птиц. А вот на птенцов нападают лисы и волки.',
-        image: 'https://live.staticflickr.com/65535/48137123012_393653c2e4.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/WNLIDKJKXT/XC518386-sense%20t%C3%ADtol.mp3'
+        name: 'Лев',
+        species: 'Panthera leo',
+        description: 'Львицы охотятся на открытых пространствах. Группа львиц способна защитить свою добычу от других хищников. Самки совершают основную часть охоты. Самцы в ней не участвуют, за исключением случаев, когда жертвой становится крупное животное.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/03/ryk-lva.mp3'
       }
     ],
     [
       {
         id: 1,
-        name: 'Альбатрос',
-        species: 'Diomedea exulans',
-        description: 'Альбатрос - самая крупная летающая птица в мире. Размах крыльев достигает три с половиной, вес - десять килограммов. Большую часть жизни альбатросы проводят в воздухе, покрывая над океанскими просторами огромные расстояния',
-        image: 'https://live.staticflickr.com/7557/16260253965_8e9430cb66.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/WOEAFQRMUD/XC293087-Diomedea%20exulans151120_T254.mp3'
+        name: 'Кашалот',
+        species: 'Physeter macrocephalus',
+        description: 'Голосовые сигналы кашалота близки к сигналам других китов. Это стонущие звуки, щелчки и быстрый треск или скрип. Кашалоты, попавшие на мель, громко ревут. Голос кашалота очень громкий — издаваемые звуки могут достигать громкости около 116 децибел.',
+        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-28-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2019/02/protjazhnyj-voj-kashalota.mp3'
       },
       {
         id: 2,
-        name: 'Олуша',
-        species: 'Sula nebouxii',
-        description: 'Особенностью голубоногой олуши является не только насыщенный ярко-синий цвет лапок, но еще и тот факт, что они очень теплые. В то время как другие виды птиц греют кладки своим телом, голубоногая олуша делает это с помощью лапок',
-        image: 'https://live.staticflickr.com/800/40645471394_4422e69ed8.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/YHKQPPJDVP/XC411507-171217_1491%20BF%20Booby%205ft%20IDLP%201230%20mp3%20amp.mp3'
+        name: 'Касатка',
+        species: 'Orcinus orca',
+        description: 'В поисках рыбы стаи косаток обычно разворачиваются в цепь и плывут со скоростью около 5 км/ч. При этом эхолокационные сигналы позволяют определять своё положение относительно других, оставаться в контакте с ними и участвовать в деятельности группы.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/07/mini-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/07/zvuk-kasatki.mp3'
       },    
       {
         id: 3,
-        name: 'Буревестник',
-        species: 'Puffinus griseus',
-        description: 'Размеры буревестниковых разные. Самые маленькие из них в длину составляют до 25 см, самые большие - до 1 м, при размахе крыльев около 2 м. Существует поверье, что появление буревестника в воздухе предвещает бурю, о чем говорит само название птицы.',
-        image: 'https://live.staticflickr.com//607//22136056020_935cb113f9.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/XQEVNREHJY/SHEARWATER%20Christmas%20Island_04_Motu_Isla%20de%20Pascua-Easter%20Island_CH_4MAR03_Alvaro%20Jaramillo.mp3'
+        name: 'Морж',
+        species: 'Odobenus rosmarus',
+        description: 'Стадо моржей всегда выставляет часовых. Обоняние развито у моржей хорошо, и они чуют человека на большом расстоянии. Заметив опасность, часовой рёвом будит остальных и животные бросаются в море.',
+        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-29-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2018/03/kriki-morzha.mp3'
       },
       {
         id: 4,
-        name: 'Пеликан',
-        species: 'Pelecanus',
-        description: 'Пеликаны — обитатели морей и рек. Ходят они неуклюже, но хорошо летают и плавают. Питаются в основном рыбой, устраивают коллективные охоты — выстроившись полукругом хлопают по воде крыльями и клювами и вытесняют напуганную рыбу на мелководье.',
-        image: 'https://live.staticflickr.com/7885/46523771945_9496c2a191.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/XAMHIHFTZG/XC331138-call1.mp3'
+        name: 'Тюлень',
+        species: 'Phoca vitulina',
+        description: 'Плавают за счёт движений задних ласт, которым помогают боковые изгибы мускулистой задней части тела. На коротких участках могут при необходимости развивать скорость до 24 км/ч. Тюлени прекрасно ныряют.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-11-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/07/golos-tjulenja.mp3'
       },
       {
         id: 5,
-        name: 'Пингвин',
-        species: 'Aptenodytes forsteri',
-        description: 'Самец императорского пингвина достигает роста 130 см, его масса может приближаться к 50 кг. Из всех современных пингвинов этот вид – самый крупный. Питание пингвина состоит из рыбы, кальмаров и криля. Охотятся птицы в океане большими группами.',
-        image: 'https://live.staticflickr.com/5202/5252413926_8e013a3efd.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC449827-LS100829%20King%20Penguin%20call%20A.mp3'
+        name: 'Кит',
+        species: 'Balaenoptera musculus',
+        description: 'Голосовые сигналы синий кит использует для обмена сигналами с сородичами; они не используются для эхолокации. Звуки, издаваемые синим китом, имеют частоту преимущественно — 8—20 Гц, то есть являются инфразвуками.',
+        image: 'http://boobooka.com/wp-content/uploads/2017/02/mini-16-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2017/02/pesnja-kita.mp3'
       },
       {
         id: 6,
-        name: 'Чайка',
-        species: 'Larus argentatus',
-        description: 'Чайки населяют берега морей, озёр, рек, водохранилищ, болот, часто гнездятся на островах. С конца прошлого века чайки стали появляться в крупных городах, где устраивает гнёзда на крышах зданий. Все чайки ведут колониальный образ жизни.',
-        image: 'https://live.staticflickr.com/65535/48577115317_7034201dde.jpg',
-        audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501190-190801_06.50h_zilvermeeuw_duinen%20van%20goeree_roep_2ex_overvliegend_gezien_.mp3'
+        name: 'Дельфин',
+        species: 'Delphinidae',
+        description: 'Сигналы испускаются на очень высоких ультразвуковых частотах, недоступных человеческому слуху. Дельфины используют частоту до 200 кГц. У них примерно шесть уровней организации звуков: звук, слог, слово, фраза, абзац, контекст, есть свои диалекты.',
+        image: 'http://boobooka.com/wp-content/uploads/2014/01/mini-delphiny-200x115.jpg',
+        audio: 'http://boobooka.com/wp-content/uploads/2014/01/Zvuki-prirody-Krik-del_finov.mp3'
       }
     ]
   ];
