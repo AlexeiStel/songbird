@@ -7,27 +7,27 @@ export default function Question(props) {
    const categoriesAnimal = [
        {
            id: 1,
-           category: 'Разминка'
+           category: 'Домашние'
        },
        {
         id: 2,
-        category: 'Воробьиные'
+        category: 'Парнокопытные'
     },
     {
         id: 3,
-        category: 'Лесные птицы'
+        category: 'Грызуны'
     },
     {
         id: 4,
-        category: 'Певчие птицы'
+        category: 'Травоядные'
     },
     {
         id: 5,
-        category: 'Хищные птицы'
+        category: 'Хищники'
     },
     {
         id: 6,
-        category: 'Морские птицы'
+        category: 'Морские'
     },
    ]
 

@@ -243,7 +243,7 @@ body {
   .final_image-none {
     color:  black;
     font-size: 2rem;
-    display: block;
+    display: none;
     text-align: center;
   }
 
