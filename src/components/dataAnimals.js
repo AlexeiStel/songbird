@@ -1,304 +1,304 @@
-const dataAnimals = [
-    [ 
-      {
-        id: 1,
-        name: 'Собака',
-        species: 'Canis lupus familiaris',
-        description: 'Самые верные друзья людей среди братьев наших меньших — это собаки. При встрече они виляют хвостом, смотрят умными глазами и заливаются звонким лаем. Собака — друг человека.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/12/%D0%BC-%D1%81-1.jpg',
-        audio: '../assets/audio/Home/Sobaka_-_Lay_sobaki-2.mp3'
-      },
-      {
-        id: 2,
-        name: 'Кот',
-        species: 'Felis silvestris catus',
-        description: 'Кошка — млекопитающее семейства кошачьих отряда хищных. Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов, а также феромоны и движения тела.',
-        image: 'http://boobooka.com/wp-content/uploads/2013/08/mur-kota.jpg',
-        audio: '../assets/audio/Home/Myaukane_koshki_-_Myaukane_koshki.mp3'
-      },
-      {
-        id: 3,
-        name: 'Лошадь',
-        species: 'Equus ferus caballus',
-        description: 'Наиболее характерную особенность лошади составляют ноги, имеющие только один вполне развитый и одетый копытом палец. Череп вытянут и отличается относительно длинной лицевой частью.',
-        image: 'http://boobooka.com/wp-content/uploads/2016/09/mini-5-200x115.jpg',
-        audio: '../assets/audio/Home/zvuk-loshadi.mp3'
-      },
-      {
-        id: 4,
-        name: 'Корова',
-        species: 'Bos taurus',
-        description: 'Диапазон слуха у коров составляет от 23 Гц до 35 кГц. Их частота наилучшей чувствительности составляет 8 кГц, и они имеют самый низкий порог -21 дБ. Пороговые значения остроты локализации звука составляют в среднем 30 °.',
-        image: 'http://boobooka.com/wp-content/uploads/2016/09/mini-15-200x115.jpg',
-        audio: '../assets/audio/Home/Korova.mp3'
-      },
-      {
-        id: 5,
-        name: 'Свинья',
-        species: 'Sus scrofa domesticus',
-        description: 'Для свиней характерно слабое зрение, острый слух, тонкое обоняние, способность хорошо плавать; повышенная плодовитость, способность к быстрому росту и жироотложению.',
-        image: 'http://boobooka.com/wp-content/uploads/2016/09/mini-18-200x115.jpg',
-        audio: '../assets/audio/Home/Zvuki_prirody_-_Svinya.mp3'
-      },
-      {
-        id: 6,
-        name: 'Овца',
-        species: 'Ovis aries',
-        description: 'Все овцы обладают хорошим слухом и чувствительны к внезапному шуму. Боковое расположение глаз и горизонтально-вытянутые зрачки увеличивают угол обзора до приблизительно 270—320°, что позволяет животным смотреть назад, не поворачивая головы.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/02/mini-21-200x115.jpg',
-        audio: '../assets/audio/Home/zvuki-barana.mp3'
-      }
-    ],
-    [
-      {
-        id: 1,
-        name: 'Зубр',
-        species: 'Bison bonasus',
-        description: 'Зубры живут небольшими стадами величиной от трёх до двадцати животных, состоящих в основном из самок и молодых телят. Лидером в стаде зубров является самка. Самцы предпочитают жить поодиночке и присоединяются к стаду только во время яра для спаривания.',
-        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-21-200x115.jpg',
-        audio: '../assets/audio/Сloven-footed/zvuki-zubra.mp3'
-      },
-      {
-        id: 2,
-        name: 'Олень',
-        species: 'Cervidae',
-        description: 'Некоторые виды живут поодиночке, однако большинство видов живут в стадах. Часто это так называемые гаремные группы, в которых один самец возглавляет группу из нескольких самок и детёнышей, обороняя её от вторжения других соперников-самцов.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-17-200x115.jpg',
-        audio: '../assets/audio/Сloven-footed/zvuk-olenja.mp3'
-      },
-      {
-        id: 3,
-        name: 'Кенгуру',
-        species: 'Macropus',
-        description: 'Кенгуру является одним из символов Австралии. Это животное изображено на гербе Австралии, некоторых австралийских монетах, а также используется некоторыми из наиболее известных австралийских организаций.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-15-200x115.jpg',
-        audio: '../assets/audio/Сloven-footed/zvuki-kenguru.mp3'
-      },
-      {
-        id: 4,
-        name: 'Жираф',
-        species: 'Giraffa camelopardalis',
-        description: 'Среди всех млекопитающих у жирафов одна из наименьших потребностей во сне — от 10 минут до 2 часов в сутки; в среднем жирафы спят 1,9 часа в день. Спят жирафы как стоя, так и лёжа, согнув шею и положив голову на круп.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-28-200x115.jpg',
-        audio: '../assets/audio/Сloven-footed/zvuk-krika-molodogo-zhirafa.mp3'
-      },
-      {
-        id: 5,
-        name: 'Бегемот',
-        species: 'Hippopotamus amphibius',
-        description: 'Поведение бегемота отличается выраженной агрессивностью. Драки бегемотов-самцов часто приводят к гибели одного из участников. Бегемот является самым опасным для человека зверем Африки ',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-25-200x115.jpg',
-        audio: '../assets/audio/Сloven-footed/hriplyj-rev-begemota.mp3'
-      },
-      {
-        id: 6,
-        name: 'Верблюд',
-        species: 'Camelus',
-        description: 'На спине у верблюдов имеются своеобразные «горбы». Верблюды в них запасают жир, окисляя который в случае большой жажды, они превращают в воду.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-9-200x115.jpg',
-        audio: '../assets/audio/Сloven-footed/zvuki-verbljuda.mp3'
-      }
-    ],
-    [
-      {
-        id: 1,
-        name: 'Ёж',
-        species: 'Erinaceus europaeus',
-        description: 'После зимней спячки у ежей начинается брачный период. Между самцами часто происходят драки из-за самок. Самцы кусают друг друга за ноги, морду, толкаются, используют в бою свои иглы. Во время драки ежи громко сопят и фыркают.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-14-200x115.jpg',
-        audio: '../assets/audio/Rodents/zvuki-ezhika.mp3'
-      },
-      {
-        id: 2,
-        name: 'Заяц',
-        species: 'Lepus',
-        description: 'Отличаются длинными ушами, коротким поднятым хвостом, недоразвитыми ключицами, длинными задними лапами, что позволяет им двигаться прыжками. Русак может достигать скорости 70 км/ч.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/07/mini-14-200x115.jpg',
-        audio: '../assets/audio/Rodents/zvuki-zajca.mp3'
-      },
-      {
-        id: 3,
-        name: 'Белка',
-        species: 'Sciurus',
-        description: 'Одной из широко известных отличительных особенностей многих белок является их способность запасать на зиму орехи. Некоторые виды белок закапывают их в землю, другие — прячут в дуплах деревьев.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-20-200x115.jpg',
-        audio: '../assets/audio/Rodents/zvuk-piska-belki.mp3'
-      },
-      {
-        id: 4,
-        name: 'Суслик',
-        species: 'Spermophilus',
-        description: 'Суслики известны своей привычкой при опасности вставать на задние лапы и издавать характерные свистящие звуки. Питаются суслики надземными и подземными частями растений, всегда неподалёку от нор. ',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-21-200x115.jpg',
-        audio: '../assets/audio/Rodents/zvuki-suslika.mp3'
-      },
-      {
-        id: 5,
-        name: 'Бурундук',
-        species: 'Tamias',
-        description: 'На зиму бурундуки впадают в спячку. Они просыпаются среди зимы, подкрепляются немного, а затем снова засыпают. Весной выходят из нор в разное время, смотря по тому, какая стоит погода. ',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-22-200x115.jpg',
-        audio: '../assets/audio/Rodents/zvuk-burunduka.mp3'
-      },
-      {
-        id: 6,
-        name: 'Шиншилла',
-        species: 'Chinchilla',
-        description: 'Шиншиллы издают очень интересные звуки: когда им что-то не нравится, они издают звук, похожий на кряканье или чириканье. Если их разозлить очень сильно, то они начинают издавать звуки, похожие на рычание, а порою при этом очень быстро щёлкают зубами.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-28-200x115.jpg',
-        audio: '../assets/audio/Rodents/zvuk-shinshilly.mp3'
-      }
-    ],
-    [
-      {
-        id: 1,
-        name: 'Косуля',
-        species: 'Capreolus',
-        description: 'Небольшие олени обладающие стройным телосложением и длинной шеей, ноги тонкие и длинные. Голова небольшого размера с длинными и широкими ушами. Только самцы имеют небольшие дважды ветвящиеся рога, в сечении округлые.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/02/mini-1-200x115.jpg',
-        audio: '../assets/audio/Herbivores/zvuk-kosuli.mp3'
-      },
-      {
-        id: 2,
-        name: 'Зебра',
-        species: 'Hippotigris',
-        description: 'Зебру невозможно приручить. По темпераменту они сильно отличаются от своих одомашненных собратьев. В их арсенале имеются клыки и копыта, которыми они активно пользуются при возникновении малейшей угрозы.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/07/mini-15-200x115.jpg',
-        audio: '../assets/audio/Herbivores/zvuki-zebry.mp3'
-      },
-      {
-        id: 3,
-        name: 'Антилопа',
-        species: 'Oryx illaqueatus',
-        description: 'У всех антилоп ноги обыкновенно довольно длинные и стройные, хвост оканчивается пучком волос, шерсть короткая и окрашена в живые цвета; у многих антилоп существуют так называемые слёзные каналы под глазами.',
-        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-30-200x115.jpg',
-        audio: '../assets/audio/Herbivores/blejanie-antilopy.mp3'
-      },
-      {
-        id: 4,
-        name: 'Слон',
-        species: ' Elephantidae',
-        description: 'Слоновые хорошо слышат в области низких частот, вплоть до инфразвука, но наибольшая чувствительность их слуха на частоте около 1 кГц[17]. Слоны обладают музыкальным слухом и музыкальной памятью, способны различать мелодии из трёх нот.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-5-200x115.jpg',
-        audio: '../assets/audio/Herbivores/zvuk-slona.mp3'
-      },
-      {
-        id: 5,
-        name: 'Носорог',
-        species: 'Rhinocerotidae',
-        description: 'Днём носороги спят, активными их можно застать в сумерках и ночью. Это очень боязливые и осторожные звери, избегающие близости к человеку. Разогнавшись, носорог может достичь скорости 45 км/ч.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-27-200x115.jpg',
-        audio: '../assets/audio/Herbivores/zvuk-nosoroga.mp3'
-      },
-      {
-        id: 6,
-        name: 'Осёл',
-        species: 'Equus asinus',
-        description: 'Ослы имеют пресловутую репутацию упрямства, но это объясняется очень сильным чувством самосохранения. Ослы тонко понимают предел своих физических возможностей и не позволяют человеку переходить его.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-14-200x115.jpg',
-        audio: '../assets/audio/Herbivores/zvuki-osla.mp3'
-      }
-    ],
-    [
-      {
-        id: 1,
-        name: 'Рысь',
-        species: 'Lynx',
-        description: 'Рысь — типичная кошка, хотя величиной с крупную собаку, которую отчасти напоминает своим укороченным телом и длинноногостью. От других кошачьих рыси отличаются коротким хвостом и кисточками на концах ушей.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-2-200x115.jpg',
-        audio: '../assets/audio/Predators/ryk-rysi.mp3'
-      },
-      {
-        id: 2,
-        name: 'Лисица',
-        species: 'Vulpes',
-        description: 'Во время гона и просто в состоянии возбуждения лисица издаёт отрывистый громкий лай; лисы, когда дерутся, пронзительно визжат. По голосу самка и самец различаются: самка делает тройной «взлай», заканчивающийся коротким воем, самец лает на манер собаки.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-12-200x115.jpg',
-        audio: '../assets/audio/Predators/krik-lisy.mp3'
-      },
-      {
-        id: 3,
-        name: 'Гепард',
-        species: 'Acinonyx jubatus',
-        description: 'Гепарды охотятся, преследуя добычу. Сначала они приближаются к выбранной жертве на расстояние около 10 метров, а затем пытаются поймать её в скоростном забеге. В погоне за жертвой развивают скорость до 130 км/ч, разгоняясь до 75 км/ч за 2 секунды.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/12/mini-1-200x115.jpeg',
-        audio: '../assets/audio/Predators/tjavkane-geparda.mp3'
-      },
-      {
-        id: 4,
-        name: 'Леопард',
-        species: 'Panthera pardus',
-        description: 'Леопард прекрасно лазает по деревьям, нередко устраиваясь там на дневной отдых или в засаде, а порой даже ловит на деревьях обезьян. Он тихо подкрадывается к добыче на расстояние прыжка. Прыгает на добычу и душит её, но в случае неудачи не преследует.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-30-200x115.jpg',
-        audio: '../assets/audio/Predators/ryk-leoparda.mp3'
-      },
-      {
-        id: 5,
-        name: 'Тигр',
-        species: 'Panthera tigris',
-        description: 'В засаде тигр обычно выжидает, лёжа под ветром, а при приближении делает быстрый рывок на короткую дистанцию. При промахах преследует добычу не далее 100—150 м. Тигр может развить скорость до 60 км/ч практически на любой местности.',
-        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-27-200x115.jpg',
-        audio: '../assets/audio/Predators/zvuk-tigra.mp3'
-      },
-      {
-        id: 6,
-        name: 'Лев',
-        species: 'Panthera leo',
-        description: 'Львицы охотятся на открытых пространствах. Группа львиц способна защитить свою добычу от других хищников. Самки совершают основную часть охоты. Самцы в ней не участвуют, за исключением случаев, когда жертвой становится крупное животное.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/03/mini-200x115.jpg',
-        audio: '../assets/audio/Predators/ryk-lva.mp3'
-      }
-    ],
-    [
-      {
-        id: 1,
-        name: 'Кашалот',
-        species: 'Physeter macrocephalus',
-        description: 'Голосовые сигналы кашалота близки к сигналам других китов. Это стонущие звуки, щелчки и быстрый треск или скрип. Кашалоты, попавшие на мель, громко ревут. Голос кашалота очень громкий — издаваемые звуки могут достигать громкости около 116 децибел.',
-        image: 'http://boobooka.com/wp-content/uploads/2019/02/mini-28-200x115.jpg',
-        audio: '../assets/audio/Marine/protjazhnyj-voj-kashalota.mp3'
-      },
-      {
-        id: 2,
-        name: 'Касатка',
-        species: 'Orcinus orca',
-        description: 'В поисках рыбы стаи косаток обычно разворачиваются в цепь и плывут со скоростью около 5 км/ч. При этом эхолокационные сигналы позволяют определять своё положение относительно других, оставаться в контакте с ними и участвовать в деятельности группы.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/07/mini-200x115.jpg',
-        audio: '../assets/audio/Marine/zvuk-kasatki.mp3'
-      },    
-      {
-        id: 3,
-        name: 'Морж',
-        species: 'Odobenus rosmarus',
-        description: 'Стадо моржей всегда выставляет часовых. Обоняние развито у моржей хорошо, и они чуют человека на большом расстоянии. Заметив опасность, часовой рёвом будит остальных и животные бросаются в море.',
-        image: 'http://boobooka.com/wp-content/uploads/2018/03/mini-29-200x115.jpg',
-        audio: '../assets/audio/Marine/kriki-morzha.mp3'
-      },
-      {
-        id: 4,
-        name: 'Тюлень',
-        species: 'Phoca vitulina',
-        description: 'Плавают за счёт движений задних ласт, которым помогают боковые изгибы мускулистой задней части тела. На коротких участках могут при необходимости развивать скорость до 24 км/ч. Тюлени прекрасно ныряют.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/07/mini-11-200x115.jpg',
-        audio: '../assets/audio/Marine/golos-tjulenja.mp3'
-      },
-      {
-        id: 5,
-        name: 'Кит',
-        species: 'Balaenoptera musculus',
-        description: 'Голосовые сигналы синий кит использует для обмена сигналами с сородичами; они не используются для эхолокации. Звуки, издаваемые синим китом, имеют частоту преимущественно — 8—20 Гц, то есть являются инфразвуками.',
-        image: 'http://boobooka.com/wp-content/uploads/2017/02/mini-16-200x115.jpg',
-        audio: '../assets/audio/Marine/zvuk-izdavaemyj-kitom.mp3'
-      },
-      {
-        id: 6,
-        name: 'Дельфин',
-        species: 'Delphinidae',
-        description: 'Сигналы испускаются на очень высоких ультразвуковых частотах, недоступных человеческому слуху. Дельфины используют частоту до 200 кГц. У них примерно шесть уровней организации звуков: звук, слог, слово, фраза, абзац, контекст, есть свои диалекты.',
-        image: 'http://boobooka.com/wp-content/uploads/2014/01/mini-delphiny-200x115.jpg',
-        audio: '../assets/audio/Marine/Zvuki-prirody-Krik-del_finov.mp3'
-      }
-    ]
-  ];
-  
-  export default dataAnimals;
+const birdsData = [
+  [       
+    {
+      id: 1,
+      name: 'Альпийская завирушка',
+      species: 'Prunella collaris',
+      description:  'Песня представляет собой журчащую неторопливую звонкую трель без определённой структуры. Она напоминает одновременно песню полевого жаворонка (но менее разнообразная и звучная) и лесной завирушки.',
+      image: 'https://www.ebirds.ru/images/e/302.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/JPBSNBUUEF/XC416731-Alpine%20Accentor%2C%20180524-002.mp3'
+    },
+    {
+      id: 2,
+      name: 'Поползень',
+      species: 'Sitta europaea',
+      description: 'Голос обычно громкий, звуковой репертуар весьма разнообразен. Наиболее обычная позывка — короткое «твит...» или «цит...», часто издаваемые быстрыми сериями по 2–4 крика. Пение представляет собой серии повторяющихся громких чистых свистов.',
+      image: 'https://www.ebirds.ru/images/e/382.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC572661-2020.06.30_12.24_01.mp3'
+    },
+    {
+      id: 3,
+      name: 'Лазоревка',
+      species: 'Cyanistes caeruleus',
+      description: 'Достаточно громкий и высокий. Основные позывки: высокое «сии...» — одиночные или сериями, комбинированные фразы «пит-пит-чиррр...» или «тиррр-ти-ти-ти...». Песня представляет собой длинные фразы из повторяющихся коротких свистов.',
+      image: 'https://www.ebirds.ru/images/e/379.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC570150-Mesange%20bleue%20cris%20de%20vol.mp3'
+    },
+    {
+      id: 4,
+      name: 'Ремез',
+      species: 'Remiz pendulinus',
+      description: 'Голос очень высокий и писклявый. Типичная позывка — тихий тонкий свист «тсиииуу...», иногда издаёт и более короткие свисты. Песня сложная, состоит из разнообразных чередующихся трелей, свистов.',
+      image: 'https://www.ebirds.ru/images/e/373.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/UXGZWVYDFE/XC533537-2020010306_1048_Remiz%20pendulinus_hiver_cris.mp3'
+    },
+    {
+      id: 5,
+      name: 'Белобровик',
+      species: 'Turdus iliacus',
+      description: 'Поют много с прилёта до середины лета, чаще всего — на вершинах самых высоких деревьев (в тундре — кустов). Песня состоит из двух частей, по продолжительности преобладает подпесня — набор негромких неразборчивых щебетаний и верещаний.',
+      image: 'https://www.ebirds.ru/images/e/367.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC575262-Grive%20mauvis%20chant.mp3'
+    },
+    {
+      id: 6,
+      name: 'Королёк',
+      species: 'Regulus regulus',
+      description: 'Позывки, которые можно слышать достаточно регулярно и по которым обычно и находят этих птиц, звучат как короткие, очень высокие и относительно тихие сигналы «тци» или «тцы», иногда объединяющиеся в короткую трельку.',
+      image: 'https://www.ebirds.ru/images/e/338.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/HVLWWLJFGV/XC574300-Roitelet%20hupp%C3%A9%20poligny.mp3'
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: 'Авдотка',
+      species: 'Burhinus oedicnemus',
+      description: 'Обитатель открытых ландшафтов с разреженной растительностью. Гнездится в щебнистых, глинистых и песчаных пустынях и полупустынях, сухих степях, на солончаках, пустошах, в массивах бугристых песков в долинах рек в степной и лесостепной зонах. Перелётная птица.',
+      image: 'https://www.ebirds.ru/images/e/128.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/PNYKOPBQBQ/XC573601-BUROED010720-T013%20%282%29.mp3'
+    },
+    {
+      id: 2,
+      name: 'Азиатский бекас',
+      species: 'Gallinago stenura',
+      description: 'Спугнутый бекас издаёт при взлёте резкий крик «вжик», но иногда слетает молча. Токовый полёт самца сопровождается различными звуками, производимыми как голосом, так и с помощью крайних рулевых перьев. Перед началом пикирования самец летает, размеренно повторяя односложные крики «жжик».',
+      image: 'https://www.ebirds.ru/images/e/166.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/LELYWQKUZX/XC288302-Gallinago%20stenura%20150507_003%2CAAAA2.MP3'
+    },
+    {
+      id: 3,
+      name: 'Золотистая ржанка',
+      species: 'Pluvialis apricaria',
+      description: 'Контактный крик в стае — мелодичный односложный свист «пиы» или «плии». Этот же крик птицы издают при беспокойстве около птенцов. Песня самца во время полёта представляет собой красивый, повторяющийся флейтовый свист,',
+      image: 'https://www.ebirds.ru/images/e/130.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/MHVQXRLBKS/XC580614-Goudplevier%20200521%202310%201a.mp3'
+    },
+    {
+      id: 4,
+      name: 'Клуша',
+      species: 'Larus fuscus',
+      description: 'Гнездится на лишённых растительности островках недалеко от берега моря или по берегам озёр. Гнездо меньших размеров, чем у серебристой чайки, напоминает гнездо сизой чайки. Для постройки использует мох, сухую траву, кусочки тростника.',
+      image: 'https://www.ebirds.ru/images/e/185.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/NZLSHDONSA/XC553220-Lesser-Black-Back-Gull.mp3'
+    },
+    {
+      id: 5,
+      name: 'Краснозобик',
+      species: 'Calidris ferruginea',
+      description: 'Вне сезона размножения сравнительно молчалив, удаётся слышать лишь негромкую позыв-ку «прип». В сезон размножения издаваемые звуки разнообразнее, причём ещё на миграциях самцы начинают издавать в полёте крики «риру-риру-риру...»',
+      image: 'https://www.ebirds.ru/images/e/157.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/TLPLNAINFU/XC577751-SNI-364_01-TUNDRASNIPE-r%C3%B8dstilkVANNAREID11072020.mp3'
+    },
+    {
+      id: 6,
+      name: 'Моевка',
+      species: 'Rissa tridactyla',
+      description: 'Возвращается на места гнездования (на Мурманском побережье) в марте или позже. Гнездится на узких карнизах и выступах крутых скал, обычно колониями. Оба родителя строят гнездо, которое состоит из мха и водорослей и имеет диаметр примерно 30 см.',
+      image: 'https://www.ebirds.ru/images/e/184.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/HNYFHZLJOD/XC559365-200517-KW2%20clip.mp3'
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: 'Аист',
+      species: 'Ciconia ciconia',
+      description:  'Взрослые птицы не способны издавать голосовых сигналов, кроме тихого шипения; при брачных демонстрациях, которые самцы устраивают, стоя на крупном гнезде, они закидывают голову назад и стучат клювом. Птенцы в гнезде подают негромкие каркающие сигналы.',
+      image: 'https://www.ebirds.ru/images/e/27.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/XUDFGWMRXG/XC521611-White%20Stork%20Bill%20Clapping_180120_EstanyDivars.825wav.mp3'
+    },
+    {
+      id: 2,
+      name: 'Египетская цапля',
+      species: 'Bubulcus ibis',
+      description: 'Встречается в тропиках и на юге умеренной зоны на всех континентах. В европейскую часть России заходит северным краем ареала, известны лишь несколько колоний на побережье Каспия, в частности, — в дельте Волги. Птицы из северных популяций зимуют в тропиках.',
+      image: 'https://www.ebirds.ru/images/e/20.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/NOJNUVZEHB/XC478435-Gardeboeufxc2.mp3'
+    },
+    {
+      id: 3,
+      name: 'Волчок',
+      species: 'Ixobrychus minutus',
+      description: 'Голос - это негромкие хрипловатые звуки, издали похожие на ритмичный собачий лай, вблизи же — на глуховатое придыхание. Эти крики являются «песней» волчка, их можно слышать в мае и июне, в остальное время он молчалив.',
+      image: 'https://www.ebirds.ru/images/e/17.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/VMQQRCTSHV/XC566756-tarab1.mp3'
+    },
+    {
+      id: 4,
+      name: 'Выпь',
+      species: 'Botaurus stellaris',
+      description: 'Голос своеобразен: весной и в начале лета самцы обозначают своё присутствие в зарослях низким, гулким двухсложным уханьем: «у-нуммб». В тихую погоду этот звук разносится на несколько километров. Чаще его можно слышать по ночам.',
+      image: 'https://www.ebirds.ru/images/e/16.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/HRHQNZTQAN/XC545485-STE-024%20bak%2012%2004%2020%20puka%2019%2030.mp3'
+    },
+    {
+      id: 5,
+      name: 'Каравайка',
+      species: 'Plegadis falcinellus',
+      description: 'Гнездится колониями, часто совместно с цаплями и бакланами, на деревьях или в зарослях тростника. Искусно построенное гнездо представляет собой неглубокую «ажурную» постройку, нередко просвечивающую насквозь, из сухих листьев тростника и веток.',
+      image: 'https://www.ebirds.ru/images/e/25.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC357886-ibis%20falcinelle.mp3'
+    },
+    {
+      id: 6,
+      name: 'Кваква',
+      species: 'Nycticorax nycticorax',
+      description: 'Голос — скрипучее «кв... кв...», именно благодаря ему вид получил своё русское название. Иногда пишут, что голос кваквы похож на скрип мокрой резины. Чаще всего его приходится слышать в гнездовых колониях.',
+      image: 'https://www.ebirds.ru/images/e/18.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC580668-JAREK-MATUSIAK-823%20%283.mp3'
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: 'Нырок',
+      species: 'Aythya nyroca',
+      description: 'Гнездится отдельными парами. Отлетает на зимовки сравнительно рано. Питается преимущественно семенами и вегетативными частями высших водных растений.',
+      image: 'https://www.ebirds.ru/images/e/55.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC219563-150320_45%20%282%29%20podgorza%C5%82ka.mp3'
+    },
+    {
+      id: 2,
+      name: 'Белощекая казарка',
+      species: 'Branta leucopsis',
+      description: 'В период гнездования явно тяготеет к приморскому ландшафту, гнездится преимущественно на островах и косах. В оптимальных местах под прикрытием колоний крупных чаек или хищных птиц образует крупные колонии из сотен гнёзд.',
+      image: 'https://www.ebirds.ru/images/e/30.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/MNQLBOLQFS/XC552438-Vitkindad_G%C3%A5s_Hj%C3%A4lstaviken_April2020_NikonD500_DSC_7613-038751.mp3'
+    },
+    {
+      id: 3,
+      name: 'Большой крохаль',
+      species: 'Mergus merganser',
+      description: 'Появляется в гнездовых областях в конце марта или начале апреля. Гнездится на лесных реках и больших озёрах с прозрачной водой, богатых рыбой. Гнезда устраивает в дуплах. На островах он может поселяться в завалах камней, под корягами или кучами тростника.',
+      image: 'https://www.ebirds.ru/images/e/65.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC475545-Storskrake_04.mp3'
+    },
+    {
+      id: 4,
+      name: 'Гоголь',
+      species: 'Bucephala clangula',
+      description: 'Во время брачных демонстраций самец издаёт пронзительный скрежет «бибиииззз, сюрприииззз», самка отвечает скрипучим «беррр-беррр». Обычный голос самки — хрипловатое карканье. Крылья у летящих взрослых самцов издают высокий частый звенящий свист.',
+      image: 'https://www.ebirds.ru/images/e/59.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC531106-MixPre-135%20%282%29%20g%C4%85go%C5%82%20skrzyd%C5%82a.mp3'
+    },
+    {
+      id: 5,
+      name: 'Лебедь-шипун',
+      species: 'Cygnus olor',
+      description: 'Крылья летящих птиц издают характерный ритмичный шипящий звон. Голос негромкий, напоминает хрюканье и короткие поросячьи повизгивания. Самка, охраняющая гнездо, по-гусиному шипит, опуская изогнутую шею со взъерошенными перьями.',
+      image: 'https://www.ebirds.ru/images/e/40.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC549767-JAREK-MATUSIAK-A-519%20%282%29%20%C5%82%C4%85b%C4%99dzie%20start.mp3'
+    },
+    {
+      id: 6,
+      name: 'Луток',
+      species: 'Mergellus albellus',
+      description: 'Весенняя миграция в средней полосе обычно проходит в апреле. Обитает на небольших лесных озёрах, старицах, медленно текущих реках. Гнезда устраивает исключительно в дуплах. В питании большую роль играют различные водные беспозвоночные.',
+      image: 'https://www.ebirds.ru/images/e/67.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/VXZDHTKCBO/Smew.mp3'
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: 'Беркут',
+      species: 'Aquila chrysaetos',
+      description: 'Основу питания составляют зайцы, суслики, сурки, крупные птицы. Отмечены успешные нападения на лисиц, оленят, глухарей, гусей. Часто питается падалью, особенно в зимний период. Охотничий участок пары может иметь площадь более 100 км2.',
+      image: 'https://www.ebirds.ru/images/e/89.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC453324-Kungs%C3%B6rn_01.mp3'
+    },
+    {
+      id: 2,
+      name: 'Бородач',
+      species: 'Gypaetus barbatus',
+      description: 'В отличие от прочих падальщиков способен питаться даже крупными костями, сухожилиями, копытами, сухими обрывками шкуры. Может ловить и живую добычу. Брачный сезон начинается в январе или феврале и сопровождается воздушными играми.',
+      image: 'https://www.ebirds.ru/images/e/94.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/UXGZWVYDFE/XC144936-Gypaetus%20barbatus_pos%C3%A9_C_F%20Deroussen_2013042300.mp3'
+    },
+    {
+      id: 3,
+      name: 'Змееяд',
+      species: 'Circaetus gallicus',
+      description: 'Предпочитает мозаичные биотопы с болотами и полянами. Основные требования к местам обитания — высокая численность змей и отсутствие беспокойства. Часто парит невысоко над землёй, высматривая добычу, нередко караулит её, сидя на присаде. ',
+      image: 'https://live.staticflickr.com/4480/37240531151_b74619c99d.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/PQDMTRPGRL/XC568545-200614-000_HP10N6_17h03_Cgallicus.mp3'
+    },
+    {
+      id: 4,
+      name: 'Канюк',
+      species: 'Buteo buteo',
+      description: 'Питается в основном мелкими грызунами, при спаде численности полёвок и других мышевидных грызунов может питаться лягушками, птенцами, даже червями и моллюсками. Высматривает добычу на открытом месте в парящем полёте с высоты 30–50 м.',
+      image: 'https://www.ebirds.ru/images/e/81.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC581056-Ormvr%C3%A5k_03.mp3'
+    },
+    {
+      id: 5,
+      name: 'Орлан-белохвост',
+      species: 'Haliaeetus albicilla',
+      description: 'В питании преобладает рыба массой до 3 кг, питается также млекопитающими размером до зайца, больными и ослабленными птицами, падалью, отбросами. Добычу ловит с бреющего полёта, рыбу выхватывает когтями из поверхностного слоя воды.',
+      image: 'https://www.ebirds.ru/images/e/90.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/MCFGTDXKHO/XC577967-200713_09T1_SA_XC.mp3'
+    },
+    {
+      id: 6,
+      name: 'Луговой лунь',
+      species: 'Circus pygargus',
+      description: 'Самец в токовом полёте издаёт мелодичные посвисты «тюв, тюву тюв», самка отвечает ему глухим «тююв». При беспокойстве самка издаёт серию криков «тюку-тюку», завершающиеся повышающимся визгом. Выпрашивая корм у самца, самка пищит, как птенец.',
+      image: 'https://www.ebirds.ru/images/e/75.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC573274-JAREK-MATUSIAK-715%20b%C5%82otniak%20%C5%82%C4%85kowy%20f%20np.mp3'
+    }
+  ],
+  [
+    {
+      id: 1,
+      name: 'Камышница',
+      species: 'Gallinula chloropus',
+      description: 'Гнездо прячет в густых зарослях, практически всегда оно располагается на воде или над водой. Старается прикрыть его и сверху, если нет естественной защиты, — загибает над ним листья болотных растений наподобие крыши беседки.',
+      image: 'https://www.ebirds.ru/images/e/122.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/FFFADKCCII/XC572898-MH-D51.mp3'
+    },
+    {
+      id: 2,
+      name: 'Коростель',
+      species: 'Crex Crex',
+      description: 'Весной самцы много кричат, по этому звуку коростеля проще всего обнаружить в природе, он же послужил основой для его латинского названия. Обычно крик бывает отчётливо сдвоенным, но при сильном возбуждении некоторые самцы перестают «двоить» и начинают кричать с постоянными интервалами.',
+      image: 'https://www.ebirds.ru/images/e/121.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/TVVXDBKYFX/XC573232-Rale%20des%20genets%2C%20chant%2C%200101-011328.WAV.Mp3'
+    },    
+    {
+      id: 3,
+      name: 'Лысуха',
+      species: 'Fulica atra',
+      description: 'Насиживают и воспитывают птенцов оба родителя. После размножения, перед отлётом на зимовки, формирует скопления из десятков и даже сотен и тысяч птиц. Отлетает несколько раньше большинства водоплавающих. Обратно прилетает в апреле.',
+      image: 'https://www.ebirds.ru/images/e/123.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/EDRTTPSCEN/XC574905-Foulque%20macroule%20200524_1600_0CA_Marais%20d%27Harchies_Digue%20d%27Harchies_Mixpre%20513.mp3'
+    },
+    {
+      id: 4,
+      name: 'Пастушок',
+      species: 'Rallus aquaticus',
+      description: 'Весной и в начале лета выдаёт своё присутствие голосом: ритмичными металлическими выкриками «дзит, дзит». Кричать может и днём, но чаще его голос раздаётся в сумерках или ночью(пронзительное «поросячье» взвизгивание при беспокойстве).',
+      image: 'https://www.ebirds.ru/images/e/117.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/VJHWYWADLY/XC579743-Ra%20juv.mp3'
+    },
+    {
+      id: 5,
+      name: 'Стрепет',
+      species: 'Tetrax tetrax',
+      description: 'Обычно молчалив, иногда можно слышать сигналы, передаваемые как «пуль-пуль-пуль». Голос самца в период токования — повторяемые с большими паузами (около 10 секунд) сухие хриплые трескучие сигналы «пррт», приглушённые.',
+      image: 'https://www.ebirds.ru/images/e/126.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC416638-LS109081%20Little%20Bustard%20call%20C.mp3'
+    },
+    {
+      id: 6,
+      name: 'Султанка',
+      species: 'Porphyrio poliocephalus',
+      description: 'Держится в зарослях тростника или другой высокой околоводной растительности, скрытна и осторожна. Ловко лазает по стеблям растений, ходит и бегает, часто забирается по брюхо в воду, но плавать не любит. Взлетает неохотно, летит обычно низко над землёй или водой.',
+      image: 'https://www.ebirds.ru/images/e/124.jpg',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC460193-LS101092%20Grey-headed%20Swamphen%20calls%20A.mp3'
+    }
+  ]
+];
+
+export default birdsData;
