@@ -5,21 +5,21 @@ import Question from './components/question';
 import Answer from './components/answer';
 import Button from './components/button';
 import randomInteger from './components/random';
-import AnimalInfo from './components/animalInfo';
-import dataAnimals from './components/dataAnimals';
+import BirdInfo from './components/birdInfo';
+import birdsData from './components/birdsData';
 import correct from './assets/audio/correct.mp3';
 import error from './assets/audio/error.mp3';
-import myImage from './assets/image/animal.png';
+import myImage from './assets/image/bird.jpg';
 import finalImage from './assets/image/Cup.jpg';
 
 import './css/style.css';
 
 const startState = {
-   animals: {
+   birds: {
      name: "******",
      image: myImage,
      description:
-       "SoundAnimal! Игра - узнай животное по его голосу. Послушай аудио и выбери зверя!"
+       "Soundbird! Игра - узнай животное по его голосу. Послушай аудио и выбери зверя!"
    },
    activeNumberTab: 0,
    randomNum: randomInteger(0, 5),
@@ -60,11 +60,11 @@ class App extends React.Component {
           score: this.state.score + this.state.increaseScore,
           isDivined: true,
           isButton: true,
-          animals: {
+          birds: {
             name: 
-              dataAnimals[this.state.activeNumberTab][this.state.randomNum].name,
+              birdsData[this.state.activeNumberTab][this.state.randomNum].name,
             image:
-              dataAnimals[this.state.activeNumberTab][this.state.randomNum].image
+              birdsData[this.state.activeNumberTab][this.state.randomNum].image
           }
         });
 
@@ -129,10 +129,10 @@ class App extends React.Component {
        return;
      }
      this.setState({
-       animals: {
-         name: startState.animals.name,
-         image: startState.animals.image,
-         description: startState.animals.description
+       birds: {
+         name: startState.birds.name,
+         image: startState.birds.image,
+         description: startState.birds.description
        },
        randomNum: randomInteger(0, 5),
        increaseScore: startState.increaseScore,
@@ -155,9 +155,9 @@ class App extends React.Component {
             <Question 
                activeNumberTab={this.state.activeNumberTab} 
                playing={this.state.playing}
-               name={this.state.animals.name}
-               image={this.state.animals.image}
-               audio={dataAnimals[this.state.activeNumberTab][this.state.randomNum].audio}
+               name={this.state.birds.name}
+               image={this.state.birds.image}
+               audio={birdsData[this.state.activeNumberTab][this.state.randomNum].audio}
             />
             <div className="answer">
               <Answer 
@@ -167,25 +167,25 @@ class App extends React.Component {
                 random={this.state.randomNum}
                 classAnswer={this.state.classAnswer}
               />
-              <AnimalInfo
-                  indication={this.state.animals.description}
+              <BirdInfo
+                  indication={this.state.birds.description}
                   classHint={this.state.classHint}
                   classInfo={this.state.classInfo}
                   image={
-                      dataAnimals[this.state.activeNumberTab][this.state.selectItem].image
+                      birdsData[this.state.activeNumberTab][this.state.selectItem].image
                   }
                   name={
-                      dataAnimals[this.state.activeNumberTab][this.state.selectItem].name
+                      birdsData[this.state.activeNumberTab][this.state.selectItem].name
                   }
                   latin={
-                      dataAnimals[this.state.activeNumberTab][this.state.selectItem]
+                      birdsData[this.state.activeNumberTab][this.state.selectItem]
                         .species
                   }
                   audio={
-                      dataAnimals[this.state.activeNumberTab][this.state.selectItem].audio
+                      birdsData[this.state.activeNumberTab][this.state.selectItem].audio
                   }
                   description={
-                      dataAnimals[this.state.activeNumberTab][this.state.selectItem].description
+                      birdsData[this.state.activeNumberTab][this.state.selectItem].description
                   }
               />
             </div>
@@ -199,7 +199,7 @@ class App extends React.Component {
                 Score:<span className="final-number">{this.state.score}/30</span>
               </h1>
                   <h2 className={this.state.score === 30 ? "" : startState.finalImage}>
-                      Ты - настоящий повелитель зверей!
+                      Ты - настоящий повелитель птиц!
                   </h2>
                   <img
                     style={
