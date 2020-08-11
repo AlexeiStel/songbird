@@ -13,7 +13,9 @@ export default function BirdInfo(props) {
                     <hr />
                     <h4 className='title-latin'>{props.latin}</h4>
                     <hr />
-                    <Player className='audio' src={props.audio} toplay={props.toplay} controls />
+                    <div className='audio'>
+                        <Player src={props.audio} toplay={props.toplay} controls />
+                    </div>
                 </div>
             </div>
             <p className="bird-text">
