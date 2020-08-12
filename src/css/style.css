@@ -225,7 +225,7 @@ body {
     position: absolute;
     background: rgb(209, 166, 85);
     width: 100%;
-    height: auto;
+    height: 800px;
     left: 0;
     top: 0;
     overflow: hidden;
@@ -256,7 +256,7 @@ body {
     letter-spacing: 0.1rem;
     line-height: 0.3rem;
     text-decoration: none;
-    margin: 100px auto 30px;
+    margin: 250px auto 30px;
   }
   
   .final-number {

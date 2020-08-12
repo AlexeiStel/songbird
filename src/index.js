@@ -209,7 +209,7 @@ class App extends React.Component {
                 Score:<span className = "final-number">{this.state.score}/30</span>
               </h1>
                   <h4 className = {this.state.score === 30 ? "" : startState.finalImage}>Поздравляем!</h4>
-                  <h4 className = {this.state.score === 30 ? "" : startState.finalImage}>Вы - настоящий знаток птичьего голоса!</h4>
+                  <h4 className = {this.state.score === 30 ? "" : startState.finalImage}>Вы - настоящий знаток птичьих голосов!</h4>
                   <img
                     style = {
                       { 
