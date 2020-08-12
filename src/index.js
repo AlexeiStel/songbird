@@ -19,7 +19,7 @@ const startState = {
      name: "******",
      image: myImage,
      description:
-       "Soundbird! Игра - узнай животное по его голосу. Послушай аудио и выбери зверя!"
+       "Songbird! Игра - узнай птичку по её голосу. Послушай аудио и выбери птицу!"
    },
    activeNumberTab: 0,
    randomNum: randomInteger(0, 5),
@@ -32,16 +32,21 @@ const startState = {
    classInfo: "hidden",
    classHint: "visible",
    classAnswer: new Array(6).fill("dot"),
+   flag: true,
    playing: false,
    final: "final__wrapper-hidden",
    finalImage: "final_image-none"
 };
 
 class App extends React.Component {
-   state = startState;
+  constructor() {
+    super();
+    this.state = startState;
+  } 
+  
    
-  handleItems = (event) => {
-    const item = event.target.closest(".answer__item");
+  handleItems(event) {
+    const item = event.target.closest('.answer__item');
     const index = item.dataset.index;
 
       if (item === null) {
@@ -91,35 +96,39 @@ class App extends React.Component {
       pressedItem.add(index);
       this.setState({ pressedItem });
    
-    +index === this.state.randomNum 
+    Number(index) === this.state.randomNum 
     ? handleRightChoise() 
     : handleIncorrectChoise();
 };
   
-  handleChoise = event => {
+  handleChoise(event) {
    const index = +event.currentTarget.dataset.index;
    const classAnswer = this.state.classAnswer.concat();
 
    const highlihtGreen = () => {
     classAnswer.splice(index, 1, "dot green");
-     this.setState({ classAnswer });
+     this.setState({ classAnswer, 
+                     flag: false
+                   });
      this.audio = new Audio(correct);
      this.audio.play();
      this.setState({ playing: true });
    };
 
    const highlihtRed = () => {
+     if (this.state.flag) {
     classAnswer.splice(index, 1, "dot red");
      this.setState({ classAnswer });
      this.audio = new Audio(error);
      this.setState({ playing: false });
      this.audio.play();
+     }
    };
 
    index === this.state.randomNum ? highlihtGreen() : highlihtRed();
  };
 
- handleButton = () => {
+ handleButton() {
    if (this.state.isButton) {
      if (this.state.activeNumberTab === 5) {
        this.setState(startState);
@@ -143,6 +152,7 @@ class App extends React.Component {
        classHint: startState.classHint,
        activeNumberTab: this.state.activeNumberTab + 1,
        classAnswer: startState.classAnswer,
+       flag: startState.flag,
        playing: startState.playing
       });
     }
@@ -151,72 +161,72 @@ class App extends React.Component {
  render() {
    return (
          <>
-            <Header score={this.state.score} />
+            <Header score = {this.state.score} />
             <Question 
-               activeNumberTab={this.state.activeNumberTab} 
-               playing={this.state.playing}
-               name={this.state.birds.name}
-               image={this.state.birds.image}
-               audio={birdsData[this.state.activeNumberTab][this.state.randomNum].audio}
+               activeNumberTab = {this.state.activeNumberTab} 
+               playing = {this.state.playing}
+               name = {this.state.birds.name}
+               image = {this.state.birds.image}
+               audio = {birdsData[this.state.activeNumberTab][this.state.randomNum].audio}
             />
-            <div className="answer">
+            <div className = "answer">
               <Answer 
-                activeNumberTab={this.state.activeNumberTab}
-                onChoose={event => this.handleItems(event)}
-                onClick={event => this.handleChoise(event)}
-                random={this.state.randomNum}
-                classAnswer={this.state.classAnswer}
+                activeNumberTab = {this.state.activeNumberTab}
+                onChoose = {event => this.handleItems(event)}
+                onClick = {event => this.handleChoise(event)}
+                random = {this.state.randomNum}
+                classAnswer = {this.state.classAnswer}
               />
               <BirdInfo
-                  indication={this.state.birds.description}
-                  classHint={this.state.classHint}
-                  classInfo={this.state.classInfo}
-                  image={
+                  indication = {this.state.birds.description}
+                  classHint = {this.state.classHint}
+                  classInfo = {this.state.classInfo}
+                  image = {
                       birdsData[this.state.activeNumberTab][this.state.selectItem].image
                   }
-                  name={
+                  name = {
                       birdsData[this.state.activeNumberTab][this.state.selectItem].name
                   }
-                  latin={
+                  latin = {
                       birdsData[this.state.activeNumberTab][this.state.selectItem]
                         .species
                   }
-                  audio={
+                  audio = {
                       birdsData[this.state.activeNumberTab][this.state.selectItem].audio
                   }
-                  description={
+                  description = {
                       birdsData[this.state.activeNumberTab][this.state.selectItem].description
                   }
               />
             </div>
             <Button 
-               name="Next level"
-               active={this.state.isButton}
-               onClick={() => this.handleButton()}
+               name = "Next level"
+               active = {this.state.isButton}
+               onClick = {() => this.handleButton()}
             />
-            <div className={this.state.final}>
-              <h1 className="final">
-                Score:<span className="final-number">{this.state.score}/30</span>
+            <div className = {this.state.final}>
+              <h1 className = "final">
+                Score:<span className = "final-number">{this.state.score}/30</span>
               </h1>
-                  <h2 className={this.state.score === 30 ? "" : startState.finalImage}>
-                      Ты - настоящий повелитель птиц!
-                  </h2>
+                  <h4 className = {this.state.score === 30 ? "" : startState.finalImage}>Поздравляем!</h4>
+                  <h4 className = {this.state.score === 30 ? "" : startState.finalImage}>Вы - настоящий знаток птичьего голоса!</h4>
                   <img
-                    style={
+                    style = {
                       { 
                         width: "40%", 
-                        height: "auto", 
+                        height: "auto",
+                        marginTop: "20px",  
                         marginBottom: "20px" 
                       }
                     }
-                    src={finalImage}
-                    className={this.state.score === 30 ? "" : startState.finalImage}
+                    src = {finalImage}
+                    className = {this.state.score === 30 ? "" : startState.finalImage}
                     alt="winner"
                   />
               <Button
-                  name="Try again!"
-                  active={this.state.isButton}
-                  onClick={() => this.handleButton()}
+                  name = "Try again!"
+                  active = {this.state.isButton}
+                  onClick = {() => this.handleButton()}
               />
             </div>
         </>
