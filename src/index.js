@@ -43,12 +43,15 @@ class App extends React.Component {
     super();
     this.state = startState;
   } 
-  
+
+  rightAnswer() {
+    console.log(birdsData[this.state.activeNumberTab][this.state.randomNum].name);
+  }
+
    
   handleItems(event) {
     const item = event.target.closest('.answer__item');
     const index = item.dataset.index;
-
       if (item === null) {
         return;
       }
@@ -159,6 +162,7 @@ class App extends React.Component {
   };
 
  render() {
+  this.rightAnswer();   
    return (
          <>
             <Header score = {this.state.score} />
